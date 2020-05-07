@@ -6,7 +6,9 @@ export default class Index extends Component {
 
   componentWillMount () { }
 
-  componentDidMount () { }
+  componentDidMount () {
+
+  }
 
   componentWillUnmount () { }
 
@@ -21,8 +23,16 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Text>Hello world!</Text>
+        <Text onClick={this.doLogin}>登陆</Text>
       </View>
     )
   }
+
+  doLogin(){
+      Taro.navigateTo({
+          url: '/pages/login/index'
+      })
+  }
+
+
 }
